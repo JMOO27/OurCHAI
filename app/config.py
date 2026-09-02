@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     MODEL : str
     
     model_config = SettingsConfigDict(
-        env_file=r"C:\Users\Jason\Desktop\AI_Dashboard\app\.env",
+        env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore"
