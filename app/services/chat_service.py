@@ -11,7 +11,7 @@ def send_request_to_openrouter(content : str) -> object | None:
             "Authorization": f"Bearer {settings.API_KEY.get_secret_value()}",
         },
         data = json.dumps ({
-            "model": settings.MODEL,
+            "model": f"{settings.MODEL}",
             "messages": [
                 {
                 "role": "user",

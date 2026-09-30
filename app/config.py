@@ -6,6 +6,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     API_KEY : SecretStr
     MODEL : str
+    FRONTEND_DIR : str
+    DATABASE_PATH : str
     
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -16,4 +18,4 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:
-    return Settings()
+    return Settings() # type: ignore
