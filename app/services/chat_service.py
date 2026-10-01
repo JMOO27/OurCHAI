@@ -1,8 +1,9 @@
 from config import get_settings
 import requests
 import json
+from typing import Any
 
-def send_request_to_openrouter(content : str) -> object | None:
+def send_request_to_openrouter(content : str) -> dict[Any, Any] | None:
     settings = get_settings()
 
     response = requests.post(
